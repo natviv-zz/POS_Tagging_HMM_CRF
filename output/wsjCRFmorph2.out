@@ -1,0 +1,13 @@
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+Exception in thread "main" java.io.FileNotFoundException: wsj_morph (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at cc.mallet.fst.SimpleTagger.main(SimpleTagger.java:504)
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s

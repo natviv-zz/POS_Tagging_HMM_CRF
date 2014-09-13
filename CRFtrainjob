@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -J CRFtrainjob
+#SBATCH -o wsjmore.out
+#SBATCH -p normal
+#SBATCH -n 16
+#SBATCH -t 8:00:00
+#SBATCH -A Solar-ABM
+#SBATCH --mail-user=natviv@utexas.edu
+
+date
+java -Xms1024m -Xmx1024m -cp "mallet-2.0.7/class:mallet-2.0.7/lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger --train true --model-file model_file --threads 16 --training-proportion 1.0 --test lab wsj_trainmore wsj_testmore
+date

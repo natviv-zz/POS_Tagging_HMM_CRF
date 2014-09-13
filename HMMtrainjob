@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -J HMMtrainjob
+#SBATCH -o wsjHMM.out
+#SBATCH -p normal
+#SBATCH -n 16
+#SBATCH -t 8:00:00
+#SBATCH -A Solar-ABM
+#SBATCH --mail-user=natviv@utexas.edu
+
+date
+java -Xms64m -Xmx64m -cp "mallet-2.0.7/class:mallet-2.0.7/lib/mallet-deps.jar" cc.mallet.fst.HMMSimpleTagger --train true --model-file model_file --training-proportion 1.0 --test lab wsj_train wsj_test
+date
